@@ -1,0 +1,22 @@
+# Build binaries & object files
+*.o
+*.a
+*.so
+*.out
+hydra_db_cli
+otworz_baze
+stworz_baze
+
+# Database binary files & large datasets
+*.bin
+*.db
+*.json
+*.csv
+*.tar.gz
+*.zip
+
+# System & IDE files
+.DS_Store
+__pycache__/
+*.swp
+*.tmp
