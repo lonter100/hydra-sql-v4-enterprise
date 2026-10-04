@@ -14,14 +14,14 @@
 
 ```mermaid
 graph TD
-    A[Python Client / Application / PyTorch] -->|Python SDK / CLI| B[HYDRA-SQL Compiled Binary Engine]
-    B --> C[Zero-Copy mmap Core - PROT_READ]
-    C --> D[O(1) Direct Byte-Offset Indexer]
-    C --> E[AVX2 SIMD Vector Acceleration]
-    C --> F[GPUDirect Storage - GDS PCIe DMA to VRAM]
-    D --> H[NVMe SSD Storage]
+    A["Python Client / Application / PyTorch"] -->|Python SDK / CLI| B["HYDRA-SQL Compiled Binary Engine"]
+    B --> C["Zero-Copy mmap Core - PROT_READ"]
+    C --> D["O(1) Direct Byte-Offset Indexer"]
+    C --> E["AVX2 SIMD Vector Acceleration"]
+    C --> F["GPUDirect Storage - GDS PCIe DMA to VRAM"]
+    D --> H["NVMe SSD Storage"]
     E --> H
-    F -->|32.4 GB/s NVMe-to-VRAM| I[NVIDIA GPU VRAM]
+    F -->|32.4 GB/s NVMe-to-VRAM| I["NVIDIA GPU VRAM"]
 ```
 
 ### 1. 🚀 Zero-Copy $O(1)$ Direct Offset Indexing
